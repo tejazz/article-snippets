@@ -29,4 +29,4 @@ const scrapeWebsiteData = (url) => {
     });
 };
 
-scrapeWebsiteData('https://www.amazon.in/Apple-MacBook-Pro-8th-Generation-Intel-Core-i5/dp/B07S8D1K3M/ref=sr_1_1_sspa?crid=PXJV2CGQP1HH&keywords=macbook+pro+13+inch&qid=1572790136&sprefix=macbook%2Caps%2C406&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE0SUtNODI5UVJFR04mZW5jcnlwdGVkSWQ9QTAxMzM5MTczTEVCUkNYQ1JPNUgxJmVuY3J5cHRlZEFkSWQ9QTAxNjAzMTAyWkxNUkxBUU5ER01FJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==')
+scrapeWebsiteData('https://www.amazon.in/Apple-MacBook-Pro-8th-Generation-Intel-Core-i5/dp/B07S8D1K3M/ref=sr_1_1_sspa?crid=PXJV2CGQP1HH&keywords=macbook+pro+13+inch&qid=1572790136&sprefix=macbook%2Caps%2C406&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE0SUtNODI5UVJFR04mZW5jcnlwdGVkSWQ9QTAxMzM5MTczTEVCUkNYQ1JPNUgxJmVuY3J5cHRlZEFkSWQ9QTAxNjAzMTAyWkxNUkxBUU5ER01FJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==');
