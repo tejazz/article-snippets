@@ -11,7 +11,7 @@ const scrapeWebsiteData = (url) => {
         Product.PriceText = $('#priceblock_ourprice').text();
         Product.Image = $('#landingImage').attr('data-old-hires');
 
-        // calculate the price in amount
+        // calculate the price in terms of value
         let price = parseInt(Product.PriceText.slice(2, Product.PriceText.length).replace(/,/g, ''));
         Product.PriceValue = price;
 
