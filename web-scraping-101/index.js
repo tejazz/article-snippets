@@ -2,6 +2,8 @@ const request = require('request');
 // const request = require('request-promise');
 const cheerio = require('cheerio');
 
+// using request and callbacks
+
 const scrapeWebsiteData = (url) => {
     request(url, (err, res, html) => {
 
