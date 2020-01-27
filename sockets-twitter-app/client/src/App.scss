@@ -1,0 +1,41 @@
+.MainContainer {
+  padding: 10px;
+
+  .ActionBtn {
+    padding: 5px;
+    color: white;
+    background-color: #333333;
+    outline: none;
+    cursor: pointer;
+
+    &--Active {
+      background-color: white;
+      color: #333333;
+    }
+  }
+
+  .TweetContainer {
+    margin-top: 30px;
+
+    .TweetItem {
+      border-bottom: 1px solid black;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      background: #333333;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+
+      &__User {
+        font-weight: 600;
+        opacity: 0.4;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+      }
+
+      &__Text {
+        margin-top: 0px;
+      }
+    }
+  }
+}
