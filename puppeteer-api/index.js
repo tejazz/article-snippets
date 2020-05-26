@@ -3,7 +3,7 @@ const userAgent = require('user-agents');
 
 async function fetchProductList(url, searchTerm) {
     let startTime = Date.now();
-    const browser = await puppeteer.launch({ headless: false, defaultViewport: null });
+    const browser = await puppeteer.launch({ headless: true, defaultViewport: null });
     const page = await browser.newPage();
     await page.setUserAgent(userAgent.toString());
     await page.goto(url, { waitUntil: 'networkidle2' });
@@ -19,14 +19,14 @@ async function fetchProductList(url, searchTerm) {
         let totalSearchResults = Array.from(document.querySelectorAll('div[data-cel-widget^="search_result_"]')).length;
 
         let productsList = [];
-        let onlyProduct = false;
-        let emptyProductMeta = false;
 
         for (let i = 1; i < totalSearchResults - 1; i++) {
             let product = {
                 brand: '',
                 product: '',
             };
+            let onlyProduct = false;
+            let emptyProductMeta = false;
 
             let productNodes = Array.from(document.querySelectorAll(`div[data-cel-widget="search_result_${i}"] .a-size-base-plus.a-color-base`));
 
@@ -51,7 +51,9 @@ async function fetchProductList(url, searchTerm) {
             let rawPrice = document.querySelector(`div[data-cel-widget="search_result_${i}"] span.a-offscreen`);
             product.price = rawPrice ? rawPrice.innerText : '';
 
-            !product.product.trim() ? null : productsList = productsList.concat(product);
+            if (typeof product.product !== 'undefined') {
+                !product.product.trim() ? null : productsList = productsList.concat(product);
+            }
         }
 
         return productsList;
@@ -64,4 +66,4 @@ async function fetchProductList(url, searchTerm) {
     console.log('Time: ', (Date.now() - startTime) / 1000, 's');
 }
 
-fetchProductList('https://www.amazon.in', 'Leggings');
+fetchProductList('https://www.amazon.in', 'Shirts');
