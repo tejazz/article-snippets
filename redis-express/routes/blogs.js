@@ -5,7 +5,9 @@ const cleanCache = require('../middleware/cleanCache');
 
 blogsRouter.route('/:user')
     .get(async (req, res, next) => {
-        const blogs = await Blog.find({ user: req.params.user }).cache({ key: req.params.user });
+        const blogs = await Blog
+                            .find({ user: req.params.user })
+                            .cache({ key: req.params.user });
 
         res.status(200).json({
             blogs,
