@@ -1,0 +1,62 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.main-container {
+    min-width: 445px;
+    min-height: fit-content;
+    background-color: black;
+    color: white;
+}
+
+.section-title {
+    padding: 6px 0;
+    margin: 0;
+    margin-left: 4px;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 15px;
+}
+
+.perf-tile {
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 8px;
+}
+
+.metric-tile {
+    background-color: green;
+    width: 100px;
+    height: 60px;
+    padding: 1px;
+    position: relative;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+.metric-caption {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 700;
+}
+
+.metric-value {
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    margin: 0;
+    font-size: 22px;
+}
+
+.metric-ms {
+    opacity: 0.8;
+    font-size: 16px;
+}
